@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Smart Pharmacy Guide | Stop Overpaying for Prescriptions</title>
+<meta name="description" content="Free printable medication tracker, plus the book from a certified pharmacy technician with 20 years behind the counter: how to stop overpaying for prescriptions, win insurance denials, and keep every medication straight.">
+<meta property="og:title" content="The Smart Pharmacy Guide">
+<meta property="og:description" content="Stop overpaying for prescriptions. From a certified pharmacy technician with 20 years behind the counter.">
+<meta property="og:image" content="https://smartpharmacyguide.com/cover.jpg">
+<meta property="og:url" content="https://smartpharmacyguide.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+  :root { --navy:#1c3444; --cream:#fdf9ef; --gold:#e6a94b; --gold-dark:#b57a1e; --ink:#3f5563; --muted:#6b7d88; --line:rgba(28,52,68,.14); }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--cream); color:var(--navy); font-family:Poppins,'Segoe UI',Arial,sans-serif; font-size:18px; line-height:1.6; }
+  a { color:var(--gold-dark); text-decoration:none; } a:hover { color:var(--navy); }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+  img { max-width:100%; }
+  .serif { font-family:'Libre Caslon Display',Georgia,'Times New Roman',serif; font-weight:400; letter-spacing:-.3px; }
+  .mono { font-family:'IBM Plex Mono',Consolas,monospace; }
+  .wrap { max-width:1200px; margin:0 auto; padding:0 24px; }
+  .eyebrow { font-family:'IBM Plex Mono',Consolas,monospace; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--gold-dark); font-weight:600; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:56px; padding:14px 28px; border-radius:6px; font-weight:600; font-size:17px; text-align:center; border:2px solid transparent; cursor:pointer; font-family:inherit; }
+  .btn-gold { background:var(--gold); color:var(--navy); border-color:var(--gold); } .btn-gold:hover { background:#d99a35; border-color:#d99a35; color:var(--navy); }
+  .btn-line { border-color:var(--navy); color:var(--navy); background:transparent; } .btn-line:hover { background:var(--navy); color:var(--cream); }
+  h1,h2 { margin:0; }
+  p { margin:0; }
+
+  header { border-bottom:1px solid var(--line); background:var(--cream); }
+  .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 0; }
+  .brand { font-size:24px; color:var(--navy); }
+  .brand span { color:var(--gold-dark); }
+  .links { display:flex; align-items:center; gap:32px; font-size:16px; font-weight:500; }
+  .links a { color:var(--navy); }
+  .links .btn { min-height:44px; padding:8px 18px; font-size:15px; }
+
+  .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; padding:72px 0 88px; }
+  .hero h1 { font-size:clamp(40px,6vw,76px); line-height:1.02; }
+  .hero p.lead { font-size:21px; color:var(--ink); max-width:560px; }
+  .actions { display:flex; gap:16px; flex-wrap:wrap; }
+  .note { font-size:15px; color:var(--muted); }
+  .coverwrap { position:relative; display:flex; justify-content:center; align-items:center; min-height:520px; }
+  .coverwrap::before { content:""; position:absolute; width:420px; height:420px; border-radius:50%; background:rgba(230,169,75,.18); right:10%; top:8%; }
+  .coverwrap img { width:360px; box-shadow:0 30px 60px rgba(28,52,68,.28); border-radius:4px; transform:rotate(-3deg); position:relative; }
+
+  .band { background:var(--navy); color:var(--cream); padding:88px 0; }
+  .band h2 { color:var(--cream); }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+  .stack { display:flex; flex-direction:column; gap:22px; }
+  h2.title { font-size:clamp(30px,4vw,52px); line-height:1.08; }
+  .band p { color:#cdd8de; }
+  form.kit { display:flex; flex-direction:column; gap:12px; max-width:520px; }
+  form.kit .row { display:flex; gap:12px; flex-wrap:wrap; }
+  form.kit input { flex:1; min-width:220px; min-height:56px; border:0; border-radius:6px; padding:0 18px; font-size:17px; background:var(--cream); color:var(--navy); font-family:inherit; }
+  form.kit small { font-size:14px; color:#9fb0ba; line-height:1.5; }
+  .receipt { width:100%; max-width:380px; margin:0 auto; background:var(--cream); color:var(--navy); padding:36px 32px 44px; box-shadow:0 30px 60px rgba(0,0,0,.35); font-family:'IBM Plex Mono',Consolas,monospace;
+    clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),96% 100%,92% calc(100% - 12px),88% 100%,84% calc(100% - 12px),80% 100%,76% calc(100% - 12px),72% 100%,68% calc(100% - 12px),64% 100%,60% calc(100% - 12px),56% 100%,52% calc(100% - 12px),48% 100%,44% calc(100% - 12px),40% 100%,36% calc(100% - 12px),32% 100%,28% calc(100% - 12px),24% 100%,20% calc(100% - 12px),16% 100%,12% calc(100% - 12px),8% 100%,4% calc(100% - 12px),0 100%); }
+  .receipt .head { text-align:center; font-size:13px; letter-spacing:3px; color:var(--muted); padding-bottom:18px; border-bottom:1px dashed #b7c4cb; }
+  .receipt ul { list-style:none; margin:0; padding:22px 0; display:flex; flex-direction:column; gap:14px; font-size:15px; color:var(--ink); }
+  .receipt li { display:flex; justify-content:space-between; }
+  .receipt .total { display:flex; justify-content:space-between; align-items:baseline; padding-top:18px; border-top:1px dashed #b7c4cb; font-weight:600; font-size:18px; }
+  .receipt .total b { color:var(--gold-dark); font-size:26px; font-weight:600; }
+
+  section.plain { padding:96px 0; }
+  .intro { max-width:760px; display:flex; flex-direction:column; gap:16px; margin-bottom:48px; }
+  .intro p { color:var(--ink); }
+  .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-bottom:44px; }
+  .card { display:flex; flex-direction:column; gap:12px; padding:32px; background:#fff; border:1px solid var(--line); border-radius:8px; }
+  .card .big { font-family:'Libre Caslon Display',Georgia,serif; font-size:44px; color:var(--gold); line-height:1; }
+  .card .t { font-weight:600; font-size:19px; }
+  .card .d { font-size:16px; color:var(--ink); line-height:1.55; }
+
+  .kits { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .kit-card { display:flex; gap:26px; align-items:center; padding:30px; border-radius:8px; border:1px solid var(--line); background:#fff; color:var(--navy); }
+  .kit-card.dark { background:var(--navy); color:var(--cream); border-color:var(--navy); }
+  .kit-card .thumb { width:110px; height:144px; flex-shrink:0; background:var(--cream); border-radius:3px; display:flex; align-items:flex-end; padding:9px; }
+  .kit-card .thumb i { display:block; width:100%; height:60%; border:1px solid #b7c4cb; border-top:8px solid var(--navy); }
+  .kit-card.red .thumb i { border-top-color:#b3261e; }
+  .kit-card .t { font-weight:600; font-size:22px; }
+  .kit-card .d { font-size:16px; line-height:1.5; color:var(--ink); }
+  .kit-card.dark .d { color:#cdd8de; }
+  .kit-card .price { font-weight:600; color:var(--gold-dark); margin-top:6px; }
+  .kit-card.dark .price { color:var(--gold); }
+  .kit-card:hover { box-shadow:0 12px 30px rgba(28,52,68,.15); }
+
+  .about { background:#fff; border-top:1px solid var(--line); padding:88px 0; }
+  .about .two { grid-template-columns:300px 1fr; }
+  .photo { width:300px; height:300px; border-radius:50%; object-fit:cover; background:var(--navy); display:flex; align-items:center; justify-content:center; color:var(--gold); font-family:'IBM Plex Mono',Consolas,monospace; font-size:15px; letter-spacing:2px; }
+  .about p { color:var(--ink); font-size:18px; line-height:1.65; }
+  .social { display:flex; gap:24px; font-weight:500; }
+
+  footer { background:var(--navy); color:#9fb0ba; padding:40px 0; font-size:14px; line-height:1.6; }
+  footer .wrap { display:flex; justify-content:space-between; gap:40px; align-items:flex-start; flex-wrap:wrap; }
+  footer .copy { color:var(--cream); font-size:18px; }
+
+  @media (max-width: 900px) {
+    .links a:not(.btn) { display:none; }
+    .brand { font-size:19px; white-space:nowrap; }
+    .kit-card { flex-direction:column; align-items:flex-start; } .kit-card .thumb { width:90px; height:118px; }
+    .hero { grid-template-columns:1fr; gap:24px; padding:44px 0 56px; text-align:left; }
+    .coverwrap { min-height:0; order:-1; padding:8px 0 16px; }
+    .coverwrap img { width:200px; } .coverwrap::before { width:240px; height:240px; right:20%; top:0; }
+    .two { grid-template-columns:1fr; gap:36px; }
+    .cards, .kits { grid-template-columns:1fr; }
+    .about .two { grid-template-columns:1fr; } .photo { width:140px; height:140px; font-size:11px; }
+    section.plain, .band, .about { padding:56px 0; }
+    .actions .btn { width:100%; }
+    form.kit .row { flex-direction:column; } form.kit .btn { width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand serif">The Smart Pharmacy <span>Guide</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#kit">Free tracker</a>
+      <a href="#book">The book</a>
+      <a href="#printables">Printables</a>
+      <a href="#about">About Josh</a>
+      <a href="#kit" class="btn btn-gold">Get the free kit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div class="stack" style="gap:26px">
+      <div class="eyebrow">From a certified pharmacy technician · 20 years behind the counter</div>
+      <h1 class="serif">Stop overpaying for prescriptions.</h1>
+      <p class="lead">The same pill can have four different prices. Most insurance denials are paperwork. Nobody at the counter is going to volunteer any of it. I wrote down everything I used to tell people, one question at a time.</p>
+      <div class="actions">
+        <a href="#kit" class="btn btn-gold">Get the free Medication Tracker Kit</a>
+        <a href="https://amzn.to/45UIzse" class="btn btn-line" rel="sponsored noopener" target="_blank">Get the book on Amazon</a>
+      </div>
+      <p class="note">Paperback $14.99 · Kindle $4.99 · Free to read with Kindle Unlimited</p>
+    </div>
+    <div class="coverwrap">
+      <img src="cover.jpg" alt="The Smart Pharmacy Guide book cover" width="360" height="540">
+    </div>
+  </section>
+
+  <section id="kit" class="band">
+    <div class="wrap two">
+      <div class="stack">
+        <div class="eyebrow" style="color:var(--gold)">Free download</div>
+        <h2 class="serif title">The paper system I wish every patient walked up to the counter with.</h2>
+        <p>Ten printable pages: a medication master list, a weekly dose checklist, a refill calendar, a symptom journal, a vitals log, and the ten questions that save the most money at the pharmacy. Print as many copies as you need.</p>
+        <!-- FORM: point action at the MailerLite (or other) form endpoint when the list exists. -->
+        <form class="kit" action="#" method="post" onsubmit="event.preventDefault(); this.querySelector('small').textContent='Sign-up is not connected yet. Check back shortly.';">
+          <div class="row">
+            <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required autocomplete="email">
+            <button type="submit" class="btn btn-gold">Send me the kit</button>
+          </div>
+          <small>One email with the download link, plus an occasional note when a new kit or a Medicare change is worth knowing about. Unsubscribe any time.</small>
+        </form>
+      </div>
+      <div class="receipt" aria-hidden="true">
+        <div class="head">MEDICATION TRACKER KIT</div>
+        <ul>
+          <li><span>Master list</span><span>1 pg</span></li>
+          <li><span>Weekly dose checklist</span><span>1 pg</span></li>
+          <li><span>Refill calendar</span><span>1 pg</span></li>
+          <li><span>Symptom journal</span><span>1 pg</span></li>
+          <li><span>Vitals + cost logs</span><span>2 pg</span></li>
+          <li><span>Provider directory</span><span>1 pg</span></li>
+          <li><span>Questions to ask</span><span>1 pg</span></li>
+        </ul>
+        <div class="total"><span>YOU PAY</span><b>0.00</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="plain">
+    <div class="wrap">
+      <div class="intro">
+        <div class="eyebrow">The book</div>
+        <h2 class="serif title">What you would learn if you stood behind the counter for twenty years.</h2>
+        <p>Written in plain language for the person picking up the prescriptions: patients on three or more medications, and the adult children managing a parent's.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="big">4</div><div class="t">prices for the same pill</div><div class="d">Retail, insurance, discount card, and the $4 list. Which one you pay depends on one question you were never told to ask.</div></div>
+        <div class="card"><div class="big">Denied</div><div class="t">usually means a form is missing</div><div class="d">Prior authorizations, step therapy, quantity limits, and the exact words that get them cleared. Most denials are paperwork, not medicine.</div></div>
+        <div class="card"><div class="big">Free</div><div class="t">brand-name medication exists</div><div class="d">Manufacturer patient assistance programs give away millions of doses a year. How to find them and how to apply, step by step.</div></div>
+      </div>
+      <div class="actions">
+        <a href="https://amzn.to/45UIzse" class="btn btn-gold" rel="sponsored noopener" target="_blank">Paperback · $14.99</a>
+        <a href="https://amzn.to/45UIzse" class="btn btn-line" rel="sponsored noopener" target="_blank">Kindle · $4.99, free with Kindle Unlimited</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="printables" class="plain" style="padding-top:0">
+    <div class="wrap">
+      <div class="intro" style="margin-bottom:36px">
+        <div class="eyebrow">Printable kits</div>
+        <h2 class="serif title" style="font-size:clamp(28px,3.4vw,44px)">Paper still works best at the kitchen table.</h2>
+      </div>
+      <div class="kits">
+        <a class="kit-card dark" href="https://smartpharmacyguide.etsy.com" target="_blank" rel="noopener">
+          <div class="thumb"><i></i></div>
+          <div class="stack" style="gap:8px"><div class="t">Medication Tracker Kit</div><div class="d">The ten pages from the free download plus the full detail sheet set, in a print-ready bundle.</div><div class="price">$6.99 on Etsy →</div></div>
+        </a>
+        <a class="kit-card red" href="https://smartpharmacyguide.etsy.com" target="_blank" rel="noopener">
+          <div class="thumb"><i></i></div>
+          <div class="stack" style="gap:8px"><div class="t">Emergency Medication List</div><div class="d">Fridge sheet, fold-over wallet cards, and a caregiver copy, so the ER can read what you take.</div><div class="price">$4.99 on Etsy →</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap two">
+      <!-- Replace the div below with: <img class="photo" src="josh.jpg" alt="Josh Hagar"> -->
+      <div class="photo" role="img" aria-label="Author photo coming soon">[AUTHOR PHOTO]</div>
+      <div class="stack" style="gap:18px">
+        <div class="eyebrow">About the author</div>
+        <h2 class="serif title" style="font-size:clamp(30px,3.4vw,44px)">Josh Hagar, CPhT</h2>
+        <p>Twenty years as a certified pharmacy technician, most of it at the counter where the price comes up and the conversation starts. I watched the same problems repeat: a daughter who couldn't tell the ER what her mom takes, a patient paying three copays when two would do, a refill that ran out on a Sunday. Almost none of it was medical. It was organization, and knowing what to ask. This site is everything I used to say across the counter, written down.</p>
+        <div class="social">
+          <a href="https://www.tiktok.com/@waterbg" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.youtube.com/@waterbg" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://smartpharmacyguide.etsy.com" target="_blank" rel="noopener">Etsy shop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="max-width:720px">The Smart Pharmacy Guide is educational and organizational. It does not replace advice from your doctor or pharmacist. As an Amazon Associate I earn from qualifying purchases.</p>
+    <p class="copy serif">© 2026 Josh Hagar</p>
+  </div>
+</footer>
+
+</body>
+</html>
