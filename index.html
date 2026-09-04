@@ -152,14 +152,38 @@
         <div class="eyebrow" style="color:var(--gold)">Free download</div>
         <h2 class="serif title">The ten questions I wish every patient asked at the counter.</h2>
         <p>A two-page printable: the ten questions that save the most money and prevent the most mistakes, with the one-line reason behind each, plus a medication master list to fill out from your bottles before your next visit. Free, and yours to print as often as you like.</p>
-        <!-- FORM: point action at the MailerLite (or other) form endpoint when the list exists. -->
-        <form class="kit" action="#" method="post" onsubmit="event.preventDefault(); this.querySelector('small').textContent='Sign-up is not connected yet. Check back shortly.';">
+        <!-- Posts to MailerLite (group: Website - Free Questions Sheet). JS submits in place; without JS the form still posts normally. -->
+        <form class="kit" id="kitform" action="https://assets.mailerlite.com/jsonp/2615686/forms/197700940430575019/subscribe" method="post" target="_blank">
           <div class="row">
-            <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required autocomplete="email">
+            <input type="email" name="fields[email]" placeholder="Your email address" aria-label="Email address" required autocomplete="email">
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
             <button type="submit" class="btn btn-gold">Send me the sheet</button>
           </div>
           <small>One email with the download link, plus an occasional note when a new kit or a Medicare change is worth knowing about. Unsubscribe any time.</small>
         </form>
+        <script>
+          (function(){
+            var f=document.getElementById('kitform'); if(!f) return;
+            f.addEventListener('submit', function(e){
+              e.preventDefault();
+              var btn=f.querySelector('button'), note=f.querySelector('small');
+              btn.disabled=true; btn.textContent='Sending\u2026';
+              fetch(f.action, {method:'POST', body:new FormData(f)})
+                .then(function(r){ return r.json(); })
+                .then(function(d){
+                  if(d && d.success){
+                    f.querySelector('.row').hidden=true;
+                    note.innerHTML='<strong style="color:var(--cream)">Sent. Check your inbox for the download link.</strong> If it does not arrive in a few minutes, look in Spam or Promotions, or <a href="downloads/SPG_Free_Pharmacy_Questions.pdf" style="color:var(--gold)">open the sheet here</a>.';
+                  } else { throw new Error('bad'); }
+                })
+                .catch(function(){
+                  btn.disabled=false; btn.textContent='Send me the sheet';
+                  note.textContent='That did not go through. Please try again, or email the address in the footer and I will send it.';
+                });
+            });
+          })();
+        </script>
       </div>
       <div class="receipt" aria-hidden="true">
         <div class="head">PHARMACY QUESTIONS SHEET</div>
