@@ -173,7 +173,7 @@
                 .then(function(r){ return r.json(); })
                 .then(function(d){
                   if(d && d.success){
-                    f.querySelector('.row').hidden=true;
+                    f.querySelector('.row').style.display='none';
                     note.innerHTML='<strong style="color:var(--cream)">Sent. Check your inbox for the download link.</strong> If it does not arrive in a few minutes, look in Spam or Promotions, or <a href="downloads/SPG_Free_Pharmacy_Questions.pdf" style="color:var(--gold)">open the sheet here</a>.';
                   } else { throw new Error('bad'); }
                 })
