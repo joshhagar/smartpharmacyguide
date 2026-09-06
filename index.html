@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
-  :root { --navy:#1c3444; --cream:#fdf9ef; --gold:#e6a94b; --gold-dark:#b57a1e; --ink:#3f5563; --muted:#6b7d88; --line:rgba(28,52,68,.14); }
+  :root { --navy:#1c3444; --cream:#fdf9ef; --gold:#e6a94b; --gold-dark:#95620f; --ink:#3f5563; --muted:#5a6c77; --line:rgba(28,52,68,.14); }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body { margin:0; background:var(--cream); color:var(--navy); font-family:Poppins,'Segoe UI',Arial,sans-serif; font-size:18px; line-height:1.6; }
@@ -71,7 +71,7 @@
   .intro p { color:var(--ink); }
   .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; margin-bottom:44px; }
   .card { display:flex; flex-direction:column; gap:12px; padding:32px; background:#fff; border:1px solid var(--line); border-radius:8px; }
-  .card .big { font-family:'Libre Caslon Display',Georgia,serif; font-size:44px; color:var(--gold); line-height:1; }
+  .card .big { font-family:'Libre Caslon Display',Georgia,serif; font-size:44px; color:#c4821f; line-height:1; }
   .card .t { font-weight:600; font-size:19px; }
   .card .d { font-size:16px; color:var(--ink); line-height:1.55; }
 
@@ -134,7 +134,7 @@
     <div class="stack" style="gap:26px">
       <div class="eyebrow">From a certified pharmacy technician · 20 years behind the counter</div>
       <h1 class="serif">Stop overpaying for prescriptions.</h1>
-      <p class="lead">The same pill can have four different prices. Most insurance denials are paperwork. Nobody at the counter is going to volunteer any of it. I wrote down everything I used to tell people, one question at a time.</p>
+      <p class="lead">The same pill can have four different prices. A lot of insurance denials are paperwork. Nobody at the counter is going to volunteer any of it. I wrote down everything I used to tell people, one question at a time.</p>
       <div class="actions">
         <a href="https://amzn.to/45UIzse" class="btn btn-gold" rel="sponsored noopener" target="_blank">Get the book on Amazon</a>
         <a href="#kit" class="btn btn-line">Free: the 10 questions to ask</a>
@@ -160,7 +160,7 @@
             <input type="hidden" name="anticsrf" value="true">
             <button type="submit" class="btn btn-gold">Send me the sheet</button>
           </div>
-          <small>One email with the download link, plus an occasional note when a new kit or a Medicare change is worth knowing about. Unsubscribe any time.</small>
+          <small>One email with the download link, plus an occasional note when a new kit or a Medicare change is worth knowing about. Unsubscribe any time. Your address goes to MailerLite, which sends the email, and nowhere else. <a href="privacy.html" style="color:var(--gold)">Privacy policy</a>.</small>
         </form>
         <script>
           (function(){
@@ -179,7 +179,7 @@
                 })
                 .catch(function(){
                   btn.disabled=false; btn.textContent='Send me the sheet';
-                  note.textContent='That did not go through. Please try again, or email the address in the footer and I will send it.';
+                  note.textContent='That did not go through. Please try again, or email josh@smartpharmacyguide.com and I will send it.';
                 });
             });
           })();
@@ -208,7 +208,7 @@
       </div>
       <div class="cards">
         <div class="card"><div class="big">4</div><div class="t">prices for the same pill</div><div class="d">Retail, insurance, discount card, and the $4 list. Which one you pay depends on one question you were never told to ask.</div></div>
-        <div class="card"><div class="big">Denied</div><div class="t">usually means a form is missing</div><div class="d">Prior authorizations, step therapy, quantity limits, and the exact words that get them cleared. Most denials are paperwork, not medicine.</div></div>
+        <div class="card"><div class="big">Denied</div><div class="t">usually means a form is missing</div><div class="d">Prior authorizations, step therapy, quantity limits, and the exact words that get them cleared. Many denials are paperwork, not medicine.</div></div>
         <div class="card"><div class="big">Free</div><div class="t">brand-name medication exists</div><div class="d">Manufacturer patient assistance programs give away millions of doses a year. How to find them and how to apply, step by step.</div></div>
       </div>
       <div class="actions">
@@ -257,7 +257,10 @@
 <footer>
   <div class="wrap">
     <p style="max-width:720px">The Smart Pharmacy Guide is educational and organizational. It does not replace advice from your doctor or pharmacist. As an Amazon Associate I earn from qualifying purchases.</p>
-    <p class="copy serif">© 2026 Josh Hagar</p>
+    <div class="stack" style="gap:6px">
+      <p class="copy serif">© 2026 Josh Hagar</p>
+      <p><a href="mailto:josh@smartpharmacyguide.com" style="color:#cdd8de">josh@smartpharmacyguide.com</a> · <a href="privacy.html" style="color:#cdd8de">Privacy policy</a></p>
+    </div>
   </div>
 </footer>
 
